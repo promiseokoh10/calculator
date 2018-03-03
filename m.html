@@ -1,0 +1,206 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Scientific Calculator</title>
+
+    <script type="text/javascript">
+        input = '';
+        textbox = document.getElementById("textbox");
+
+        function dis(x) {
+            frm.txt.value = frm.txt.value + x;
+            input += x;
+            console.log(input);
+        }
+
+
+
+        //All clear button function CE
+
+        function ce() {
+            frm.txt.value = '';
+            input = '';
+
+        }
+
+        //-> button function
+
+        function BS() {
+            frm.txt.value = frm.txt.value.slice(0, frm.txt.value.length - 1);
+            input.value = input.value.slice(0, input.length - 1);
+        }
+
+        function sin() {
+            frm.txt.value = frm.txt.value + "sin";
+            input += "Math.sin";
+            console.log(input);
+        }
+
+        function cos() {
+            frm.txt.value = frm.txt.value + "cos";
+            input += "Math.cos";
+            console.log(input);
+        }
+
+        function tan() {
+            frm.txt.value = frm.txt.value + "tan";
+            input += "Math.tan";
+            console.log(input);
+        }
+
+        function log() {
+            frm.txt.value = frm.txt.value + "log";
+            input += "Math.log";
+            console.log(input);
+        }
+
+        function ln() {
+            frm.txt.value = frm.txt.value + "ln";
+            input += "Math.log";
+            console.log(input);
+        }
+
+        function exp() {
+            frm.txt.value = frm.txt.value + "exp";
+            input += "Math.exp";
+            console.log(input);
+        }
+
+        function sqrt() {
+            frm.txt.value = frm.txt.value + "sqrt";
+            input += "Math.sqrt";
+            console.log(input);
+        }
+
+        function mod() {
+            frm.txt.value = frm.txt.value + "mod";
+            input += "%";
+            console.log(input);
+        }
+
+        function pi() {
+            frm.txt.value = frm.txt.value + "pi";
+            input += "3.14159265";
+            console.log(input);
+
+        }
+
+        function equal() {
+            console.log(input);
+            frm.txt.value = eval(input);
+        }
+
+        function fact(x) {
+            if (x == 0) {
+                return 1
+            } else {
+                return x * fact(x - 1);
+            }
+        }
+    </script>
+    <style type="text/css">
+        #textbox {
+            text-align: right;
+            width: 430px;
+            border: 2px solid goldenrod;
+            height: 70px;
+            font-size: 40px;
+            text-align: right;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            margin-left: 3px
+        }
+        
+        #container {
+            border: 5px solid black;
+            width: 440px;
+            border-radius: 3px;
+            background-color: aqua;
+        }
+        
+        .btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: center;
+            color: chocolate;
+        }
+        
+        .btn:hover {
+            border: 2px solid whitesmoke;
+            text-align: center;
+            font-weight: bold;
+            font-family: arial black;
+            font-size: 20px;
+        }
+        
+        .btn-wide {
+            width: 400px;
+            text-align: center;
+        }
+        
+        .btn-sqrt {
+            font-size: 15px;
+        }
+        
+        .btn-sqrt:hover {
+            font-size: 15px;
+            font-weight: bold;
+            border: 2px solid white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>PMG SCIENTIFIC CALCULATOR</h1>
+    <div id="container">
+        <form name="frm">
+            <input class="btn" id="textbox" type="textbox" name="txt"><br>
+            <input class="btn" id="" type="button" name="br1" value="(" onclick="dis(br1.value)">
+            <input class="btn" id="" type="button" name="brr" value=")" onclick="dis(brr.value)">
+            <input class="btn" id="" type="button" value="CE" onclick="ce()">
+            <input class="btn" id="" type="button" value="DEL" onclick="BS()">
+            <input class="btn" type="button" name="btnexp" value="EXP" onclick="exp() "><br>
+
+            <input class="btn" type="button" name="btn9" value="9" onclick="dis(btn9.value)">
+            <input class="btn" type="button" name="btn8" value="8" onclick="dis(btn8.value)">
+            <input class="btn" type="button" name="btn7" value="7" onclick="dis(btn7.value)">
+            <input class="btn" type="button" name="btnd" value="/" onclick="dis(btnd.value)">
+            <input class="btn" type="button" name="btnsin" value="SIN " onclick="sin()"><br>
+
+            <input class="btn" type="button" name="btn6" value="6" onclick="dis(btn6.value)">
+            <input class="btn" type="button" name="btn5" value="5" onclick="dis(btn5.value)">
+            <input class="btn" type="button" name="btn4" value="4" onclick="dis(btn4.value)">
+            <input class="btn" type="button" name="btnm" value="*" onclick="dis(btnm.value)">
+            <input class="btn" type="button" name="btncos" value="COS" onclick="cos() "><br>
+
+            <input class="btn" type="button" name="btn3" value="3" onclick="dis(btn3.value)">
+            <input class="btn" type="button" name="btn2" value="2" onclick="dis(btn2.value)">
+            <input class="btn" type="button" name="btn1" value="1" onclick="dis(btn1.value)">
+            <input class="btn" type="button" name="btns" value="-" onclick="dis(btns.value)">
+            <input class="btn" type="button" name="btntan " value="TAN " onclick="tan()"><br>
+
+            <input class="btn" type="button" name="btndot" value="." onclick="dis(btndot.value)">
+            <input class="btn" type="button" name="btn0" value="0" onclick="dis(btn0.value)">
+            <input class="btn btn-sqrt" type="button" name="btnsqrt" value=SQRT onclick="sqrt()">
+            <input class="btn" type="button" name="btnp" value="+" onclick="dis(btnp.value)">
+            <input class="btn" type="button" name="btnlog" value="LOG" onclick="log() "><br>
+
+            <input class="btn" type="button" name="btnmod" value="MOD " onclick="mod()">
+            <input class="btn" type="button" name="btnpow" value="^" onclick="dis(btnpow.value) ">
+            <input class="btn" type="button" name="btnfac " value="! " onclick="frm.txt.value=fact(frm.txt.value)">
+            <input class="btn" type="button" name="btnpi" value="PI" onclick="pi() ">
+            <input class="btn" type="button" name="btnln " value="ln " onclick="ln()"><br>
+            <input class="btn btn-wide" type="button" name="btneq" value="=" onclick="equal(input)">
+
+    </div>
+</body>
+
+</html>
